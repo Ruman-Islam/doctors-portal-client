@@ -3,15 +3,15 @@ import CustomLink from './CustomLink';
 
 const Navbar = () => {
     const menuItems = <>
-        <li><CustomLink to='/'>Home</CustomLink></li>
-        <li><CustomLink to='/about'>About</CustomLink></li>
-        <li><CustomLink to='/appointment'>Appointment</CustomLink></li>
-        <li><CustomLink to='/reviews'>Reviews</CustomLink></li>
-        <li><CustomLink to='/contact'>Contact Us</CustomLink></li>
+        <li className='mr-2'><CustomLink to='/'>Home</CustomLink></li>
+        <li className='mr-2'><CustomLink to='/about'>About</CustomLink></li>
+        <li className='mr-2'><CustomLink to='/appointment'>Appointment</CustomLink></li>
+        <li className='mr-2'><CustomLink to='/reviews'>Reviews</CustomLink></li>
+        <li className='mr-2'><CustomLink to='/contact'>Contact Us</CustomLink></li>
     </>
 
     return (
-        <div className="navbar bg-base-100 xl:px-20 shadow-md mb-2">
+        <div className="navbar bg-base-100 xl:px-20 shadow-lg">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabindex="0" className="btn btn-ghost lg:hidden">

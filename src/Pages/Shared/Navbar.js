@@ -9,8 +9,9 @@ const Navbar = () => {
         <li><CustomLink to='/reviews'>Reviews</CustomLink></li>
         <li><CustomLink to='/contact'>Contact Us</CustomLink></li>
     </>
+
     return (
-        <div className="navbar bg-base-100 xl:px-20">
+        <div className="navbar bg-base-100 xl:px-20 shadow-md mb-2">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabindex="0" className="btn btn-ghost lg:hidden">
@@ -30,7 +31,7 @@ const Navbar = () => {
             <div className="dropdown dropdown-end ml-28 xl:ml-0">
                 <label tabindex="0" className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                        <img src="https://api.lorem.space/image/face?hash=33791" />
+                        {/* <img src="https://api.lorem.space/image/face?hash=33791" /> */}
                     </div>
                 </label>
                 <ul tabindex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">

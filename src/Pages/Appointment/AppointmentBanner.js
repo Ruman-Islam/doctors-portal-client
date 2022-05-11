@@ -11,7 +11,7 @@ const AppointmentBanner = ({ date, setDate }) => {
 
     return (
         <div>
-            <div className="hero min-h-full 2xl:py-36 bg-[url('/src/assets/images/bg.png')] bg-center bg-no-repeat bg-auto">
+            <div className="hero min-h-full 2xl:py-10 bg-[url('/src/assets/images/bg.png')] bg-center bg-no-repeat bg-auto">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src={bannerPic} className="max-w-xs md:max-w-3xl rounded-lg shadow-2xl" alt="" />
                     <div className='2xl:mr-10 bg-white border rounded-lg shadow-lg '>

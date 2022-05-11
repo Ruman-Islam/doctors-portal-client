@@ -6,7 +6,7 @@ const MakeAppointment = () => {
     return (
         <section
             className="flex justify-center items-center bg-accent
-             mt-20 2xl:mt-56 bg-[url('/src/assets/images/appointment.png')]
+             mt-0 xl:mt-44 2xl:mt-56 bg-[url('/src/assets/images/appointment.png')]
             bg-center bg-no-repeat bg-auto 2xl:px-64">
             <div className='flex-1 hidden lg:block'>
                 <img className='mt-[-100px]' src={doctorPic} alt="" />

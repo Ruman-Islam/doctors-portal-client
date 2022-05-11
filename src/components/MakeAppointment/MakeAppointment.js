@@ -1,6 +1,6 @@
 import React from 'react';
 import doctorPic from '../../assets/images/doctor-small.jpg';
-import PrimaryButton from '../Shared/PrimaryButton';
+import PrimaryButton from '../Common/PrimaryButton';
 
 const MakeAppointment = () => {
     return (

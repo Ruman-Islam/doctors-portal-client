@@ -2,7 +2,7 @@ import React from 'react';
 import serviceImg1 from '../../assets/images/fluoride.png';
 import serviceImg2 from '../../assets/images/cavity.png';
 import serviceImg3 from '../../assets/images/whitening.png';
-import Service from './Service';
+import ServiceCard from './ServiceCard';
 
 const services = [
     {
@@ -34,7 +34,7 @@ const Services = () => {
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 px-10 lg:px-20 my-10'>
                 {
-                    services.map(service => <Service key={service._id} service={service} />)
+                    services.map(service => <ServiceCard key={service._id} service={service} />)
                 }
             </div>
         </div>

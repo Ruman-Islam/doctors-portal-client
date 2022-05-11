@@ -32,7 +32,11 @@ const Info = () => {
     return (
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 px-10 lg:px-20 my-10 2xl:my-32'>
             {
-                cardsInfo.map(cardInfo => <InfoCard key={cardInfo._id} cardInfo={cardInfo} />)
+                cardsInfo.map(cardInfo =>
+                    <InfoCard
+                        key={cardInfo._id}
+                        cardInfo={cardInfo}
+                    />)
             }
         </div>
     );

@@ -1,8 +1,8 @@
 import React from 'react';
 import bannerPic from '../../assets/images/chair.png';
-import PrimaryButton from '../Shared/PrimaryButton';
+import PrimaryButton from '../Common/PrimaryButton';
 
-const Banner = () => {
+const Hero1 = () => {
     return (
         <div className="hero min-h-screen bg-[url('/src/assets/images/bg.png')] bg-center bg-no-repeat bg-auto">
             <div className="hero-content flex-col lg:flex-row-reverse">
@@ -17,4 +17,4 @@ const Banner = () => {
     );
 };
 
-export default Banner;
+export default Hero1;

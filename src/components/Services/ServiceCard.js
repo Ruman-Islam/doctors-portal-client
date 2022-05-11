@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Service = ({ service: { title, description, img } }) => {
+const ServiceCard = ({ service: { title, description, img } }) => {
     return (
         <div className='flex flex-col shadow-xl border rounded-xl py-10'>
             <figure className='text-center mx-auto'>
@@ -14,4 +14,4 @@ const Service = ({ service: { title, description, img } }) => {
     );
 };
 
-export default Service;
+export default ServiceCard;

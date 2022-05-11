@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Footer from '../Shared/Footer';
-import AppointmentBanner from './AppointmentBanner';
-import AvailableAppointments from './AvailableAppointments';
+import AvailableAppointments from '../components/AvailableAppointments/AvailableAppointments';
+import AppointmentBanner from '../components/AppointmentBanner/AppointmentBanner';
+import Footer from '../components/Common/Footer';
 
 const Appointment = () => {
     const [date, setDate] = useState(new Date());

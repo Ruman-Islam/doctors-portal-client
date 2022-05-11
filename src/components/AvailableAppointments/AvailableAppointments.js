@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 import React, { useEffect, useState } from 'react';
-import BookingModal from './BookingModal';
-import ServiceCard from './ServiceCard';
+import AppointmentCard from '../AppointmentCard/AppointmentCard';
+import BookingModal from '../BookingModal/BookingModal';
 
 const AvailableAppointments = ({ date }) => {
     const [services, setServices] = useState([]);
@@ -27,7 +27,7 @@ const AvailableAppointments = ({ date }) => {
             <h1 className='2xl:text-xl text-md text-secondary font-bold my-10'>Available Appointments on {format(date, 'PP')} </h1>
             <div className='grid grid-cols-1 xl:grid-cols-3 gap-5 2xl:px-72 xl:px-32 px-5 justify-items-center'>
                 {services.map(service =>
-                    <ServiceCard
+                    <AppointmentCard
                         key={service._id}
                         service={service}
                         setTreatment={setTreatment} />)}

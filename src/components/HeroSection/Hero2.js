@@ -1,8 +1,8 @@
 import React from 'react';
 import bannerPic from '../../assets/images/treatment.png';
-import PrimaryButton from '../Shared/PrimaryButton';
+import PrimaryButton from '../Common/PrimaryButton';
 
-const Banner2 = () => {
+const Hero2 = () => {
     return (
         <div className="hero 2xl:mt-32">
             <div className="hero-content flex-col lg:flex-row">
@@ -17,4 +17,4 @@ const Banner2 = () => {
     );
 };
 
-export default Banner2;
+export default Hero2;

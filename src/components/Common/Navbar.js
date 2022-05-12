@@ -1,7 +1,39 @@
 import CustomLink from './CustomLink';
 import React from 'react';
+import auth from '../../Firebase/FirebaseConfig';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+import Swal from 'sweetalert2'
 
 const Navbar = () => {
+    const [user, ,] = useAuthState(auth);
+
+    const navigate = useNavigate();
+
+    const handleSignOut = () => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You want to logout!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            background: '#fff',
+            cancelButtonColor: '#3085d6',
+            cancelButtonText: 'Cancel',
+            confirmButtonText: 'Logout',
+            backdrop: `
+            rgba(0, 0, 0, 0.438)
+            left top
+            no-repeat `
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                await signOut(auth);
+                navigate('/home')
+            }
+        })
+    }
+
     const menuItems = <>
         <li className='mr-0'><CustomLink to='/'>Home</CustomLink></li>
         <li className='mr-0'><CustomLink to='/about'>About</CustomLink></li>
@@ -28,10 +60,10 @@ const Navbar = () => {
                     {menuItems}
                 </ul>
             </div>
-            <div className="dropdown dropdown-end ml-28 xl:ml-0">
+            {user ? <div className="dropdown dropdown-end ml-28 xl:ml-0">
                 <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                        <img src="https://api.lorem.space/image/face?hash=33791" />
+                        <img src={user?.photoURL} alt='' />
                     </div>
                 </label>
                 <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
@@ -42,9 +74,9 @@ const Navbar = () => {
                         </p>
                     </li>
                     <li><p>Settings</p></li>
-                    <li><p>Logout</p></li>
+                    <li onClick={handleSignOut}><p>Logout</p></li>
                 </ul>
-            </div>
+            </div> : <li onClick={() => navigate('/login')} className='mr-0 font-semibold ml-2 cursor-pointer'>Login</li>}
         </div>
     );
 };

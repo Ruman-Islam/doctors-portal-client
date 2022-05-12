@@ -7,10 +7,10 @@ const AppointmentCard = ({ setTreatment, service }) => {
             <div className="card-body flex flex-col">
                 <div className='flex-1'>
                     <h2 className="card-title text-secondary">{name}</h2>
-                    <ul className='text-left'>{
+                    <ul className='text-left text-sm'>{
                         slots.length ?
                             <>{slots?.map((slot, index) =>
-                                <li key={index} className='text-sm'>
+                                <li key={index}>
                                     {slot}
                                 </li>)
                             }

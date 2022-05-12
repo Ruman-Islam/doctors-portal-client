@@ -1,7 +1,7 @@
-import { format } from 'date-fns';
-import React, { useEffect, useState } from 'react';
 import AppointmentCard from '../AppointmentCard/AppointmentCard';
 import BookingModal from '../BookingModal/BookingModal';
+import React, { useEffect, useState } from 'react';
+import { format } from 'date-fns';
 
 const AvailableAppointments = ({ date }) => {
     const [services, setServices] = useState([]);

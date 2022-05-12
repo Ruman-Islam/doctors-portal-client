@@ -24,7 +24,7 @@ const BookingModal = ({ treatment, setTreatment, date }) => {
                         className='mt-10'>
                         <input readOnly disabled value={date} className="input input-bordered w-full max-w-xs mb-2" />
                         <select name='slot' className="select select-bordered w-full max-w-xs mb-2">
-                            <option disabled>Select your slot</option>
+                            <option disabled>Select</option>
                             {slots.map((slot, index) => <option key={index} value={slot}>{slot}</option>)}
                         </select>
                         <input name='name' type="text" placeholder="Full Name" className="input input-bordered w-full max-w-xs mb-2" />

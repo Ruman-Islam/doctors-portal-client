@@ -24,7 +24,7 @@ const ResetPassword = () => {
 
     useEffect(() => {
         if (resetError) notifyError(resetError);
-    }, [resetError, notifyError])
+    }, [resetError, notifyError]);
 
     if (sending) {
         return <Spinner />

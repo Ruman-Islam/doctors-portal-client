@@ -23,9 +23,15 @@ const Signup = () => {
     const [updateProfile, ,] = useUpdateProfile(auth);
 
     useEffect(() => {
-        if (error) notifyError(error.message.split('/')[1].split(')')[0])
-        if (user) navigate(from, { replace: true });
-    }, [user, error, loading, from, notifyError, navigate]);
+        if (error) notifyError(error.message.split('/')[1].split(')')[0]);
+        if (user) {
+            if (!user.user?.emailVerified) {
+                navigate('/verify-email')
+            } else {
+                navigate(from, { replace: true });
+            }
+        }
+    }, [user, error, from, notifyError, navigate]);
 
     if (loading) {
         return <Spinner />

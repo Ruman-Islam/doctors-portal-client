@@ -32,7 +32,7 @@ const Signup = () => {
     }
 
     return (
-        <div className='flex flex-col justify-center items-center h-[100vh] border'>
+        <div className='flex flex-col justify-center items-center h-[100vh] md:h-[95vh] 2xl:h-[90vh]'>
             <div>
                 <div className="flex flex-col border-opacity-50 shadow-lg border py-4 rounded-lg w-80 md:w-96">
                     <SignupBox

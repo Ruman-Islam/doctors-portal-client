@@ -23,7 +23,7 @@ const LoginBox = ({ signInWithEmailAndPassword }) => {
 
     return (
         <div>
-            <h1 className='text-left text-2xl my-2 ml-5 font-semibold text-accent'>Sign In</h1>
+            <h1 className='text-left text-2xl my-2 ml-5 font-semibold underline text-accent'>Sign In</h1>
             <form onSubmit={handleSubmit(onSubmit)}
                 className='flex flex-col p-5 py-1'>
                 <>

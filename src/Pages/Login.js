@@ -28,7 +28,7 @@ const Login = () => {
     };
 
     return (
-        <div className='flex flex-col justify-center items-center h-[90vh] border'>
+        <div className='flex flex-col justify-center items-center h-[90vh]'>
             <div>
                 <div className="flex flex-col border-opacity-50 shadow-lg border py-8 rounded-lg w-80 md:w-96">
                     <LoginBox

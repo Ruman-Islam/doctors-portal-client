@@ -5,7 +5,7 @@ import PrimaryButton from '../Common/PrimaryButton';
 const Hero1 = () => {
     return (
         <div className="hero min-h-screen bg-[url('/src/assets/images/bg.png')] bg-center bg-no-repeat bg-auto">
-            <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero-content flex-col lg:flex-row-reverse mt-[-70px]">
                 <img src={bannerPic} className="max-w-xs md:max-w-2xl rounded-lg shadow-2xl" alt="" />
                 <div className='2xl:mr-10'>
                     <h1 className="text-4xl xl:text-5xl font-bold">Your New Smile Starts Here</h1>

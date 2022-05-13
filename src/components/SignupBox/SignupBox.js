@@ -3,14 +3,14 @@ import { AiOutlineMail, AiOutlineUnlock, AiOutlineUser, AiFillEyeInvisible, AiFi
 import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 
-const SignupBox = ({ createUserWithEmailAndPassword }) => {
+const SignupBox = ({ createUserWithEmailAndPassword, updateProfile }) => {
     const navigate = useNavigate();
     const { register, handleSubmit, watch, formState: { errors } } = useForm({
         mode: 'onTouched'
     });
 
     //    check password event 
-    const password = watch('password')
+    const password = watch('password');
 
     // handle password eye
     const [passwordEye, setPasswordEye] = useState(false);
@@ -31,9 +31,8 @@ const SignupBox = ({ createUserWithEmailAndPassword }) => {
         const displayName = data.username;
         const email = data.email;
         const password = data.password;
-        const confirmPassword = data.confirmPassword;
-        console.log(displayName, email, password, confirmPassword);
-        // await createUserWithEmailAndPassword(email, password)
+        await createUserWithEmailAndPassword(email, password)
+        await updateProfile({ displayName })
     };
 
 
@@ -142,7 +141,7 @@ const SignupBox = ({ createUserWithEmailAndPassword }) => {
                             })} />
                         {/* eye section */}
                         <div className="text-xl absolute top-6 right-5">
-                            {passwordEye === false ? (
+                            {confirmPasswordEye === false ? (
                                 <AiFillEyeInvisible onClick={handleConfirmPasswordClick} />
                             ) : (
                                 <AiFillEye onClick={handleConfirmPasswordClick} />

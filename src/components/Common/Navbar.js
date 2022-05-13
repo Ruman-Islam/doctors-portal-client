@@ -29,17 +29,17 @@ const Navbar = () => {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 await signOut(auth);
-                navigate('/home')
+                navigate('/home');
             }
         })
     }
 
     const menuItems = <>
-        <li className='mr-0'><CustomLink to='/'>Home</CustomLink></li>
-        <li className='mr-0'><CustomLink to='/about'>About</CustomLink></li>
-        <li className='mr-0'><CustomLink to='/appointment'>Appointment</CustomLink></li>
-        <li className='mr-0'><CustomLink to='/reviews'>Reviews</CustomLink></li>
-        <li className='mr-0'><CustomLink to='/contact'>Contact Us</CustomLink></li>
+        <li className='mr-1'><CustomLink to='/'>Home</CustomLink></li>
+        <li className='mr-1'><CustomLink to='/about'>About</CustomLink></li>
+        <li className='mr-1'><CustomLink to='/appointment'>Appointment</CustomLink></li>
+        <li className='mr-1'><CustomLink to='/reviews'>Reviews</CustomLink></li>
+        <li className='mr-1'><CustomLink to='/contact'>Contact Us</CustomLink></li>
     </>
 
     return (

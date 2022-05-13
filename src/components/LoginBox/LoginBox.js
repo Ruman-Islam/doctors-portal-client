@@ -14,6 +14,7 @@ const LoginBox = ({ signInWithEmailAndPassword }) => {
         setPasswordEye(!passwordEye);
     };
 
+    // handle submit 
     const onSubmit = async (data) => {
         const email = data.email;
         const password = data.password;

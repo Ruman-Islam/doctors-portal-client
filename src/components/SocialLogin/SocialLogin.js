@@ -2,6 +2,7 @@ import auth from '../../Firebase/FirebaseConfig';
 import { useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FacebookLoginButton, GoogleLoginButton } from "react-social-login-buttons";
+import { useEffect } from 'react';
 
 const SocialLogin = () => {
     const navigate = useNavigate();
@@ -11,9 +12,11 @@ const SocialLogin = () => {
     const [signInWithGoogle, googleUser, ,] = useSignInWithGoogle(auth);
     const [signInWithFacebook, , ,] = useSignInWithFacebook(auth);
 
-    if (googleUser) {
-        navigate(from, { replace: true });
-    }
+    useEffect(() => {
+        if (googleUser) {
+            navigate(from, { replace: true });
+        }
+    }, [googleUser, navigate, from]);
 
     return (
         <div className='px-5'>

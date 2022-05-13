@@ -20,15 +20,12 @@ const Login = () => {
 
     useEffect(() => {
         if (error) notifyError(error.message.split('/')[1].split(')')[0])
-    }, [error, notifyError]);
-
-    if (user) {
-        navigate(from, { replace: true });
-    }
+        if (user) navigate(from, { replace: true });
+    }, [user, error, loading, from, notifyError, navigate]);
 
     if (loading) {
         return <Spinner />
-    }
+    };
 
     return (
         <div className='flex flex-col justify-center items-center h-[90vh] border'>
@@ -36,7 +33,7 @@ const Login = () => {
                 <div className="flex flex-col border-opacity-50 shadow-lg border py-8 rounded-lg w-80 md:w-96">
                     <LoginBox
                         signInWithEmailAndPassword={signInWithEmailAndPassword} />
-                    <div className="divider">OR</div>
+                    <div className="divider w-64 mx-auto"><small>OR</small></div>
                     <SocialLogin />
                 </div>
             </div>

@@ -10,7 +10,7 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div>
+        <div className='px-5'>
             <Hero1 />
             <Info />
             <Services />

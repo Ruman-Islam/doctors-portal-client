@@ -11,6 +11,10 @@ import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Signup from "./Pages/Signup";
 import ResetPassword from "./Pages/ResetPassword";
 import VerifyEmail from "./Pages/VerifyEmail";
+import Dashboard from "./Pages/Dashboard";
+import MyAppointments from "./Pages/MyAppointments";
+import MyReview from "./Pages/MyReview";
+import MyHistory from "./Pages/MyHistory";
 
 function App() {
   return (
@@ -25,6 +29,16 @@ function App() {
             <Appointment />
           </PrivateRoute>
         } />
+        <Route path="/dashboard" element={
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        }>
+          <Route index element={<MyAppointments />} />
+          <Route path="/dashboard/my-appointment" element={<MyAppointments />} />
+          <Route path="/dashboard/my-review" element={<MyReview />} />
+          <Route path="/dashboard/my-history" element={<MyHistory />} />
+        </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/reset-password" element={<ResetPassword />} />
